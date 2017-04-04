@@ -6,9 +6,11 @@ module.exports = {
     devtool: 'eval',
     output: {
         path: path.join(__dirname, '/public'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: '/public/'
     },
     devServer: {
+        publicPath: '/public/',
         historyApiFallback: true
     },
     resolve: {
@@ -39,6 +41,10 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ['style-loader', { loader: 'css-loader', options: { url: false } }]
+            },
+            {
+                test: /\.(png|jpg)$/,
+                loader: 'url-loader?limit=8192'
             }
         ]
     }
