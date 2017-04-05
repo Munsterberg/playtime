@@ -1,27 +1,30 @@
 {
-  "parser": "babel-eslint",
-  "extends": "airbnb",
-  "env": {
-    "browser": true,
-    "node": true
-  },
-  "rules": {
-    "arrow-parens": ["off"],
-    "consistent-return": "off",
-    "comma-dangle": "off",
-    "generator-star-spacing": "off",
-    "import/no-unresolved": 2,
-    "indent": ["error", 4, {"SwitchCase": 1}],
-    "import/no-extraneous-dependencies": "off",
-    "no-console": 0,
-    "no-use-before-define": "off",
-    "no-multi-assign": 0,
-    "react/jsx-no-bind": "off",
-    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
-    "react/prefer-stateless-function": "off",
-    "react/jsx-indent": ["error", 4],
-  },
   "plugins": [
     "react"
   ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "react/jsx-no-undef": 2,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "no-unused-vars": 2,
+    "prefer-const": 2,
+    "linebreak-style": ["error", "unix"],
+    "semi": ["error", "always"],
+    "indent": ["error", 4, {"SwitchCase": 1}],
+    "react/prop-types": 2,
+    "react/prefer-es6-class": 2,
+    "react/no-direct-mutation-state": 2
+  }
 }
