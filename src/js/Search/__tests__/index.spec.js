@@ -25,4 +25,15 @@ describe('<Search />', () => {
         searchInput.simulate('change', {target: {value: searchTerm}});
         expect(wrapper.find(ShowCard).length).toEqual(2);
     });
+
+    describe('Full DOM rendering', () => {
+        it('should call _handleChange', () => {
+            jest.spyOn(Search.prototype, '_handleChange');
+            wrapper = mount(<Search />);
+            const searchTerm = 'house';
+            const searchInput = wrapper.find('input');
+            searchInput.simulate('change', {target: {value: searchTerm}});
+            expect(Search.prototype._handleChange).toHaveBeenCalled();
+        });
+    });
 });
