@@ -6,7 +6,7 @@
   "author": "Munsterberg <jetrussell93@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "NODE_ENV=test jest",
+    "test": "NODE_ENV=test jest --watchAll",
     "update-test": "npm run test -- -u",
     "build": "webpack",
     "dev": "webpack-dev-server --content-base public/",
