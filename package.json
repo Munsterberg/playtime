@@ -13,6 +13,16 @@
     "lint": "eslint src/js/**/*.js server.js || true",
     "watch": "webpack --watch"
   },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./helpers/setup.js",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/test.js"
+    ],
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/enzyme-to-json/serializer"
+    ],
+    "collectCoverage": true
+  },
   "dependencies": {
     "axios": "^0.15.3",
     "express": "^4.15.2",
