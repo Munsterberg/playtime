@@ -4,10 +4,6 @@ exports[`<ShowCard /> should render correct component 1`] = `
 <div
   className="show-card"
 >
-  <img
-    alt="Test movie"
-    src="/public/img/posters/something.jpg"
-  />
   <div>
     <h3>
       Test movie
