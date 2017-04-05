@@ -10,6 +10,7 @@
     "update-test": "npm run test -- -u",
     "build": "webpack",
     "dev": "webpack-dev-server --content-base public/",
+    "watch": "webpack --watch",
     "lint": "eslint src/js/**/*.js server.js || true",
     "watch": "webpack --watch"
   },
